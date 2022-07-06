@@ -10,13 +10,12 @@ const textTries = document.querySelector('.js_tries');
 
 //Función del número aleatorio
 
-
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
 const randomNumber = getRandomNumber(100)
 
-console.log(randomNumber);
+console.log(`Número a adivinar: ${randomNumber}`);
 
 //Input del botón
 
@@ -33,10 +32,9 @@ function guessNumber() {
     else if (guess < randomNumber) {
         textHint.innerHTML = "¡Demasiado bajo!";
     }
-    else if (guess > 100) {
+    else {
         textHint.innerHTML = "El número debe estar entre 1 y 100";
     }
-
 }
 
 //Función jefa, cuentaclicks y listener
@@ -48,7 +46,7 @@ function handleClick(ev) {
     guessNumber();
 
     countTries += 1;
-    console.log(countTries);
+    console.log(`Número de intentos: ${countTries}`);
     textTries.innerHTML = `Número de intentos: ${countTries}`;
 };
 
