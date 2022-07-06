@@ -27,7 +27,7 @@ function guessNumber() {
     if (guess === randomNumber) {
         textHint.innerHTML = "¡Has ganado, campeona!";
     }
-    else if (guess > randomNumber) {
+    else if (guess > randomNumber && guess <= 100) {
         textHint.innerHTML = "¡Demasiado alto!";
     }
     else if (guess < randomNumber) {
@@ -39,11 +39,17 @@ function guessNumber() {
 
 }
 
-//Click
+//Función jefa, cuentaclicks y listener
+
+let countTries = 0;
 
 function handleClick(ev) {
     ev.preventDefault();
     guessNumber();
+
+    countTries += 1;
+    console.log(countTries);
+    textTries.innerHTML = `Número de intentos: ${countTries}`;
 };
 
 inputButton.addEventListener('click', handleClick);
