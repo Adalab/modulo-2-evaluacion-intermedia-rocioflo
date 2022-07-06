@@ -88,7 +88,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -128,8 +128,48 @@ table {
 /* Página */
 
 .main {
+  width: 20vw;
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffe1ea;
+  border: #ffa0fd 2px solid;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.input {
+  background-color: white;
+  border: #001514 2px solid;
+  color: #001514;
+  box-shadow: #ffa0fd;
+  padding: 5px;
+}
+
+.button {
+  background-color: #ffa0fd;
+  padding: 5px;
+  border: white solid 2px;
+}
+
+.button:hover {
+  background-color: #e952de;
+  padding: 5px 10px;
+}
+
+.hint {
+  border: #ffa0fd 2px solid;
+  padding: 5px;
+}
+
+.tries {
+  border: #ffa0fd 2px solid;
+  padding: 5px;
 }
