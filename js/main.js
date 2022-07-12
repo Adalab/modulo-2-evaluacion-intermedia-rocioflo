@@ -32,22 +32,38 @@ function guessNumber() {
     else if (guess < randomNumber) {
         textHint.innerHTML = "¡Demasiado bajo!";
     }
+    else if (inputGuess === '') {
+        textHint.innerHTML = "¡Pon un número!"
+    }
     else {
         textHint.innerHTML = "El número debe estar entre 1 y 100";
     }
 }
 
-//Función jefa, cuentaclicks y listener
+//Cuentaclicks
 
 let countTries = 0;
+
+function counterLogic() {
+    countTries += 1;
+    feedbackPainter();
+}
+
+//Pintaclicks
+
+function feedbackPainter() {
+    console.log(`Número de intentos: ${countTries}`);
+    textTries.innerHTML = `Número de intentos: ${countTries}`;
+}
+
+//Función jefa
 
 function handleClick(ev) {
     ev.preventDefault();
     guessNumber();
-
-    countTries += 1;
-    console.log(`Número de intentos: ${countTries}`);
-    textTries.innerHTML = `Número de intentos: ${countTries}`;
+    counterLogic();
 };
+
+//Listener
 
 inputButton.addEventListener('click', handleClick);

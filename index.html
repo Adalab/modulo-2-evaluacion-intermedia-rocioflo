@@ -6,19 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivina el número</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
     <main class="main">
         <h1 class="title">Adivina el número</h1>
         <p>Introduce aquí tu número:</p>
-        <input type="number" class="input js_input">
-        <button type="button" class="button js_btn">Prueba</button>
+        <form action="">
+            <label for="input">
+                <input type="number" id="input" class="input js_input"></label>
+            <button type="button" class="button js_btn">Prueba</button>
+        </form>
         <p class="hint js_hint">Pista: escribe un número y pulsa "Prueba".</p>
         <p class="tries js_tries">Número de intentos: 0</p>
+
     </main>
-    <script src="./main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
